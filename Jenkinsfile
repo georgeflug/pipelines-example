@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh './gradlew check'
+                bat 'gradlew check'
             }
         }
         stage('Build') {
             steps {
-                sh './gradlew build'
+                bat 'gradlew build'
             }
         }
         stage('Deploy') {
             steps {
-                sh './gradlew publish'
+                bat 'gradlew publish'
             }
         }
     }
